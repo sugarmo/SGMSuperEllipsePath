@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Qg-eZ-ZGn">
+                                <rect key="frame" x="12" y="465" width="351" height="31"/>
+                                <connections>
+                                    <action selector="adjustRadius:" destination="BYZ-38-t0r" eventType="valueChanged" id="2wD-wU-ESg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIL-PI-F1Q">
+                                <rect key="frame" x="161" y="414" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdu-bx-TSX">
+                                <rect key="frame" x="165.5" y="555" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inO-gm-dms" customClass="RounedCornerView">
+                                <rect key="frame" x="37" y="64" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Y1n-aP-bG7"/>
+                                    <constraint firstAttribute="height" constant="300" id="ryE-CY-llG"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ge4-ZZ-aNz">
+                                <rect key="frame" x="39" y="606" width="296" height="29"/>
+                                <segments>
+                                    <segment title="UIKit"/>
+                                    <segment title="CoreGraphics"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleSuperEllipse:" destination="BYZ-38-t0r" eventType="valueChanged" id="g8C-6b-AXG"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Qg-eZ-ZGn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Im8-bc-ul7"/>
+                            <constraint firstItem="3Qg-eZ-ZGn" firstAttribute="top" secondItem="RIL-PI-F1Q" secondAttribute="bottom" constant="30" id="Nb7-1c-oLw"/>
+                            <constraint firstItem="RIL-PI-F1Q" firstAttribute="top" secondItem="inO-gm-dms" secondAttribute="bottom" constant="50" id="PlH-uw-Bw3"/>
+                            <constraint firstItem="inO-gm-dms" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="QvY-C3-W6F"/>
+                            <constraint firstItem="Ge4-ZZ-aNz" firstAttribute="top" secondItem="Zdu-bx-TSX" secondAttribute="bottom" constant="30" id="ava-SD-wrg"/>
+                            <constraint firstItem="Zdu-bx-TSX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bH4-pM-scS"/>
+                            <constraint firstItem="3Qg-eZ-ZGn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="dek-zV-5gm"/>
+                            <constraint firstItem="RIL-PI-F1Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g45-Kq-qyV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Qg-eZ-ZGn" secondAttribute="trailing" constant="14" id="lVI-3l-qwZ"/>
+                            <constraint firstItem="Zdu-bx-TSX" firstAttribute="top" secondItem="3Qg-eZ-ZGn" secondAttribute="bottom" constant="60" id="o3f-29-zgW"/>
+                            <constraint firstItem="Ge4-ZZ-aNz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdl-GT-94a"/>
+                            <constraint firstItem="inO-gm-dms" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xbd-b3-bsP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="modeSwitcher" destination="Ge4-ZZ-aNz" id="ZKg-2Z-Nnf"/>
+                        <outlet property="radiusSlider" destination="3Qg-eZ-ZGn" id="IFB-Gx-XiD"/>
+                        <outlet property="rounedCornerView" destination="inO-gm-dms" id="ZRy-5C-xbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
