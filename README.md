@@ -8,6 +8,6 @@ In fact `+[UIBezierPath bezierPathWithRoundedRect:cornerRadius:]` already provid
 
 You can see the corner curvature difference between **UIKit**, **CoreGraphics** and **SGMSuperEllipsePath** in the demo app.
 
-![](demo.gif)
+![](Demo.gif)
 
 If you are interested in **Curvature Continuity**, you can check [s4y/continuousCorners](https://github.com/s4y/continuousCorners) and this [notebook](https://beta.observablehq.com/@dhotson/drawing-better-looking-curves).
